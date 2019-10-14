@@ -1,0 +1,15 @@
+function destroyer(arr) {
+let arr1= arguments[0];
+         
+    for (let j=1; j <= arguments.length; j++){
+     
+    if (arr1.includes(arguments[j])){
+        arr1.splice(arr1.indexOf(arguments[j]),1);
+        j--;
+      }
+   
+  }
+  return arr1;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
